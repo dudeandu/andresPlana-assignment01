@@ -221,6 +221,10 @@ template {
   overflow: hidden;
 }
 
+html {
+  font-size: 125%;
+}
+
 h1, h2, h3, h4, p, ul {
   margin: 0;
   padding: 0;
@@ -233,4 +237,32 @@ ul {
 a {
   text-decoration: none;
   color: inherit;
+}
+
+header {
+  background-image: url("../assets/animal-land-assets/image-1.jpg");
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
+
+.headerFlexWrapper {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-family: "Fredericka the Great", cursive;
+  font-size: 6rem;
+  line-height: 117px;
+  text-transform: uppercase;
+  text-align: right;
+  color: #FCFCFC;
+  font-weight: 400;
+  max-width: 528px;
+}
+
+header .iconContainer {
+  max-width: 25px;
+  max-height: 25px;
 }

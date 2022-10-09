@@ -11,6 +11,11 @@ $funkyHed: 'Fredericka the Great', cursive;
 $bodyText: 'Roboto', sans-serif;
 $secondaryText: 'Cormorant Garamond', serif;
 
+//font setup
+html {
+    font-size: 125%;
+}
+
 // remove some margins and list styles 
 h1, h2, h3, h4, p, ul {
     margin: 0;
@@ -24,4 +29,34 @@ ul {
 a {
     text-decoration: none;
     color: inherit;
+}
+
+// Header section
+
+header {
+    background-image: url('../assets/animal-land-assets/image-1.jpg');
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.headerFlexWrapper {
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-family: $funkyHed;
+    font-size: 6rem;
+    line-height: 117px;
+    text-transform: uppercase;
+    text-align: right;
+    color: $lightColor;
+    font-weight: 400;
+    max-width: 528px;
+}
+
+header .iconContainer {
+    max-width: 25px;
+    max-height: 25px
 }
