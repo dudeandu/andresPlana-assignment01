@@ -10,3 +10,18 @@ $darkColor: #000000;
 $funkyHed: 'Fredericka the Great', cursive;
 $bodyText: 'Roboto', sans-serif;
 $secondaryText: 'Cormorant Garamond', serif;
+
+// remove some margins and list styles 
+h1, h2, h3, h4, p, ul {
+    margin: 0;
+    padding: 0
+}
+
+ul { 
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
