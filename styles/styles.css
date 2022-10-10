@@ -239,30 +239,99 @@ a {
   color: inherit;
 }
 
+img {
+  max-width: 100%;
+}
+
+.wrapper {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
 header {
   background-image: url("../assets/animal-land-assets/image-1.jpg");
   height: 100vh;
   background-size: cover;
   background-position: center;
+  padding: 20px;
+  color: #FCFCFC;
 }
-
-.headerFlexWrapper {
-  max-width: 1080px;
-  margin: 0 auto;
+header .headerFlexWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
 }
-
-h1 {
+header .iconContainer {
+  width: 25px;
+  height: 25px;
+}
+header .primaryNavFlex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+header .primaryNavFlex {
+  text-transform: uppercase;
+}
+header .primaryNavFlex li {
+  margin-right: 20px;
+}
+header .primaryNavFlex li:last-of-type {
+  margin-right: 0;
+}
+header h1 {
   font-family: "Fredericka the Great", cursive;
   font-size: 6rem;
   line-height: 117px;
   text-transform: uppercase;
   text-align: right;
-  color: #FCFCFC;
   font-weight: 400;
   max-width: 528px;
 }
 
-header .iconContainer {
-  max-width: 25px;
-  max-height: 25px;
+section.suziesSection {
+  background-color: #152D20;
+  color: #FCFCFC;
+  padding: 60px;
+}
+section.suziesSection .suzieFlexWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+section.suziesSection .imgContainer {
+  max-width: 35%;
+}
+section.suziesSection .textContainer {
+  max-width: 65%;
+  padding-left: 30px;
+}
+section.suziesSection .textContainer h2 {
+  font-family: "Fredericka the Great", cursive;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 51px;
+}
+section.suziesSection .textContainer p {
+  font-family: "Roboto", sans-serif;
+  margin: 20px 0;
+  font-weight: 300;
+  line-height: 29px;
+}
+section.suziesSection .textContainer a {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 600;
+  text-align: center;
+  line-height: 29px;
+  display: inline-block;
+  background-color: #FCFCFC;
+  color: #152D20;
+  padding: 13px 25px 10px;
+  border-radius: 5px;
+  text-transform: uppercase;
 }
