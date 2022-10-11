@@ -23,13 +23,10 @@
                 <li><a class="navText" href="#contact">Contact</a></li>
             </ul>
         </nav>
-        <h1>Animal Refuge</h1>
         
-    </div>
-    <!-- enf of headerFlexWrapper -->
+        <h1>Animal Refuge</h1>
 
-    <aside>
-        <nav  aria-label="social">
+        <nav class="socialNav" aria-label="social">
             <ul class="socialFlex">
                 <li><a href="#instagram"><div class="iconContainer"><img src="./assets/icons/instagram.svg" alt=""></div></a></li>
                 <li><a href="#facebook"><div class="iconContainer"><img src="./assets/icons/facebook.svg" alt=""></div></a></li>
@@ -37,7 +34,9 @@
                 <li><a href="#twitter"><div class="iconContainer"><img src="./assets/icons/twitter.svg" alt=""></div></a></li>
             </ul>
         </nav>
-    </aside>
+        
+    </div>
+    <!-- enf of headerFlexWrapper -->
     
 </header>
 
@@ -79,24 +78,24 @@
                         <a href="#animalSpotlight" class="imgTextButton">
                             <div class="iconContainer">
                                 <img src="./assets/icons/paw.svg" alt="An icon of an animal's paw">
-                                <p class="navText">Animal Spotlight</p>
                             </div>
+                            <p class="navText">Animal Spotlight</p>
                         </a>
                     </li>
                     <li>
                         <a href="#events" class="imgTextButton">
                             <div class="iconContainer">
                                 <img src="./assets/icons/calendar-check.svg" alt="An icon of a calendar with a checkmark on it">
-                                <p class="navText">Events</p>
                             </div>
+                            <p class="navText">Events</p>
                         </a>
                     </li>
                     <li>
                         <a href="#merch" class="imgTextButton">
                             <div class="iconContainer">
                                 <img src="./assets/icons/shopping-bag.svg" alt="An icon of a handbag">
-                                <p class="navText">Merch</p>
                             </div>
+                            <p class="navText">Merch</p>
                         </a>
                     </li>
                 </ul>
@@ -108,27 +107,29 @@
     <!-- Facts and bond section start -->
     <section class="factsAndBond">
         <div class="wrapper factsFlex">
-            <div class="textContainer">
+            <div class="container textContainer">
                 <h4>Fascinating facts about zebras</h4>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore excepturi id alias dignissimos pariatur at voluptatibus nam voluptate reprehenderit et modi, commodi quas molestias? Rem nostrum ducimus quibusdam?</p>
                 <a href="#readMoreFacts" class="readMore">Read More</a>
             </div>
+            <div class="container imgContainer"><img src="./assets/animal-land-assets/image-7.jpg" alt=""></div>
         </div>
         <div class="wrapper bondFlex">
-            <div class="textContainer">
-                <h4>Te Bond Between Animals and Humans</h4>
+            <div class="container textContainer">
+                <h4>The Bond Between Animals and Humans</h4>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore excepturi id alias dignissimos pariatur at voluptatibus nam voluptate reprehenderit et modi, commodi quas molestias? Rem nostrum ducimus quibusdam?</p>
                 <a href="#readMoreBond" class="readMore">Read More</a>
             </div>
+            <div class="container imgContainer"><img src="./assets/animal-land-assets/image-2.jpg" alt=""></div>
         </div>
     </section>
     <!-- Facts and bond section end -->
 
     <!-- about section start -->
     <section class="about">
-        <div class="wrapper aboutWrapper">
+        <div class="wrapper aboutFlexWrapper">
             
-            <nav aria-label="aboutNav">
+            <nav class="aboutNav aboutContainer" aria-label="aboutNav">
                 <ul>
                     <li><a class="navText" href="#home">Home</a></li>
                     <li><a class="navText" href="#blog">Blog</a></li>
@@ -137,19 +138,19 @@
                 </ul>
             </nav>
             
-            <div class="newsletterContainer">
+            <div class="newsletterContainer aboutContainer">
                 <p class="navText">Stay Updated</p>
-                <p>Subscribe to our newsletter to stay updated</p>
-                <label for="emailInput">INput your email to receive the newsletter</label>
-                <input type="text" name="emailInput" placeholder="email address">
-                <input type="submit" value="Submit">
+                <p class="bodyStyle">Subscribe to our newsletter to stay updated</p>
+                <!-- <label for="emailInput">Input your email to receive the newsletter</label> -->
+                <input class="inputBar" type="text" name="emailInput" placeholder="email address">
+                <input class="inputButton" type="submit" value="Submit">
             </div>
             
-            <div class="contactContainer">
+            <div class="contactContainer aboutContainer">
                 <p class="navText">Contact</p>
-                <p>info@email.com | 123 - 456 - 7890</p>
-                <p>123 some road, Toronto, ON</p>
-                <p>A5A 5A5, Canada</p>
+                <p class="bodyStyle">info@email.com | 123 - 456 - 7890</p>
+                <p class="bodyStyle">123 some road, Toronto, ON</p>
+                <p class="bodyStyle">A5A 5A5, Canada</p>
             </div>
             
         </div> 

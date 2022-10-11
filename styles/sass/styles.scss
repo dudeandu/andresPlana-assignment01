@@ -35,15 +35,42 @@ img {
     max-width: 100%;
 }
 
-// globar wrapper
-
+// global wrapper
 .wrapper{
     max-width: 1080px;
     margin: 0 auto;
 }
 
-// Header section
+//bodytext mixin 
+@mixin bodyTextStyle {    
+    font-family: $bodyText;
+    font-weight: 300;
+    line-height: 29px;
+    font-size: 20px;
+}
 
+// button mixin
+@mixin buttons($bgcolor, $textColor) {
+    font-family: $secondaryText;
+    background-color: $bgcolor;
+    color: $textColor;
+    font-weight: 600;
+    text-align: center;
+    line-height: 29px;
+    display: inline-block;
+    padding: 13px 35px 10px;
+    border-radius: 3px;
+    text-transform: uppercase;    
+}
+
+//secondary text mixin
+@mixin secText {
+    font-family: $secondaryText;
+    font-weight: 600;
+    font-size: 22px;
+}
+
+// Header section
 header {
     background-image: url('../assets/animal-land-assets/image-1.jpg');
     height: 100vh;
@@ -59,6 +86,7 @@ header {
         justify-content: space-between;
         // flex-direction: column;
         align-content: space-between;
+        height: 100%
     }
     
     .iconContainer {
@@ -74,6 +102,7 @@ header {
         text-transform: uppercase;
 
         li {
+            @include secText();
             margin-right: 20px;
 
             &:last-of-type {
@@ -90,8 +119,25 @@ header {
         text-align: right;
         font-weight: 400;
         max-width: 528px;
+
+        margin-top: 150px;
+    }
+
+    .socialNav {
+        margin-right: -30px;
+        margin-top: 75vh;
+
+        li {
+            margin-bottom: 10px;
+
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
     }
 }
+
+//suzie's story section
 
 section.suziesSection {
     background-color: $mainColor;
@@ -117,26 +163,165 @@ section.suziesSection {
             font-weight: 400;
             font-size: 51px;
         }
-
+        
         p {
-            font-family: $bodyText;
+            @include bodyTextStyle();
             margin: 20px 0;
-            font-weight: 300;
-            line-height: 29px;
         }
-
+        
         a {
-            font-family: $secondaryText;
-            font-weight: 600;
-            text-align: center;
-            line-height: 29px;
-            display: inline-block;
-            background-color: $lightColor;
-            color: $mainColor;
-            padding: 13px 25px 10px;
-            border-radius: 5px;
-            text-transform: uppercase;
+            @include buttons($lightColor, $mainColor);
         }
     }
 }
 
+//gallery section
+section.someFriendsSection {
+
+    background-color: $secondaryColor;
+    padding: 60px 0;
+
+    h3 {
+        font-family: $funkyHed;
+        text-transform: uppercase;
+        font-weight: 400;
+        font-size: 49px;
+        text-align: center;
+        color: $mainColor;
+
+        max-width: 35%;
+        margin: 0 auto 60px;
+    }
+    .galleryFlex {
+        display: flex;
+        justify-content: space-between;
+
+        li {
+            max-width: calc( 33% - 15px );
+        }
+    }
+}
+
+//store section
+section.storeNav {
+    background-color: $mainColor;
+    padding: 60px;
+}
+
+.buttonsFlex {
+    display: flex;
+    justify-content: space-around;
+    color: $lightColor;
+    text-align: center;
+
+    li {
+        max-width: 15%;
+        text-transform: uppercase;
+        @include secText();
+        
+        .iconContainer {
+            margin: 0 auto;
+            max-width: 50px;
+        }
+    }
+}
+
+// Facts and bond section styles
+section.factsAndBond {
+    .container {
+        width: 50%;
+    }
+    .textContainer {
+        padding: 30px 60px 60px;
+    }
+
+    h4 {
+        font-family: $funkyHed;
+        font-weight: 400;
+        font-size: 1.75rem;
+        text-transform: uppercase;
+        color: $mainColor;
+    }
+
+    p {
+        @include bodyTextStyle();
+        margin: 20px 0;
+    }
+
+    a {
+        @include buttons($mainColor, $lightColor)
+    }
+
+}
+
+.factsFlex, .bondFlex {
+    display: flex;
+    img {
+        height: 100%;
+    }
+}
+
+.bondFlex {
+    flex-direction: row-reverse;
+}
+
+// start of about section
+section.about {
+    background-color: $mainColor;
+    color: $lightColor;
+    padding: 60px 0;
+
+    .aboutFlexWrapper {
+        display: flex;
+        justify-content: space-between;
+
+        p.bodyStyle {
+                @include bodyTextStyle();
+                color: $lightColor;
+        }
+            
+        .navText {
+            text-transform: uppercase;
+            @include secText();
+        }
+
+        .newsletterContainer {
+            text-align: center;
+            margin: 0 auto;
+            flex-basis: 60%;
+        }
+
+        .contactContainer {
+            text-align: right;
+        }
+    }
+}
+
+.newsletterContainer {
+    .inputBar{
+        width: 380px;
+        height: 50px;
+        border: none;
+        text-decoration: none;
+        padding: 25px
+    }
+
+    input[type=submit] {
+        @include buttons($darkColor, $lightColor);
+        border: none;
+        text-decoration: none;
+    }
+}
+
+
+//start of footer section
+footer {
+    background-color: $darkColor;
+    padding: 10px 0;
+    
+    p {
+        @include bodyTextStyle();
+        text-align: center;
+        color: $lightColor;
+    }
+}

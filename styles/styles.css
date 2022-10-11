@@ -265,6 +265,7 @@ header .headerFlexWrapper {
           justify-content: space-between;
   -ms-flex-line-pack: justify;
       align-content: space-between;
+  height: 100%;
 }
 header .iconContainer {
   width: 25px;
@@ -279,6 +280,9 @@ header .primaryNavFlex {
   text-transform: uppercase;
 }
 header .primaryNavFlex li {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 600;
+  font-size: 22px;
   margin-right: 20px;
 }
 header .primaryNavFlex li:last-of-type {
@@ -292,6 +296,17 @@ header h1 {
   text-align: right;
   font-weight: 400;
   max-width: 528px;
+  margin-top: 150px;
+}
+header .socialNav {
+  margin-right: -30px;
+  margin-top: 75vh;
+}
+header .socialNav li {
+  margin-bottom: 10px;
+}
+header .socialNav li:last-of-type {
+  margin-bottom: 0;
 }
 
 section.suziesSection {
@@ -319,19 +334,192 @@ section.suziesSection .textContainer h2 {
 }
 section.suziesSection .textContainer p {
   font-family: "Roboto", sans-serif;
-  margin: 20px 0;
   font-weight: 300;
   line-height: 29px;
+  font-size: 20px;
+  margin: 20px 0;
 }
 section.suziesSection .textContainer a {
   font-family: "Cormorant Garamond", serif;
+  background-color: #FCFCFC;
+  color: #152D20;
   font-weight: 600;
   text-align: center;
   line-height: 29px;
   display: inline-block;
-  background-color: #FCFCFC;
-  color: #152D20;
-  padding: 13px 25px 10px;
-  border-radius: 5px;
+  padding: 13px 35px 10px;
+  border-radius: 3px;
   text-transform: uppercase;
+}
+
+section.someFriendsSection {
+  background-color: #C3D3CB;
+  padding: 60px 0;
+}
+section.someFriendsSection h3 {
+  font-family: "Fredericka the Great", cursive;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 49px;
+  text-align: center;
+  color: #152D20;
+  max-width: 35%;
+  margin: 0 auto 60px;
+}
+section.someFriendsSection .galleryFlex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+section.someFriendsSection .galleryFlex li {
+  max-width: calc(33% - 15px);
+}
+
+section.storeNav {
+  background-color: #152D20;
+  padding: 60px;
+}
+
+.buttonsFlex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  color: #FCFCFC;
+  text-align: center;
+}
+.buttonsFlex li {
+  max-width: 15%;
+  text-transform: uppercase;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 600;
+  font-size: 22px;
+}
+.buttonsFlex li .iconContainer {
+  margin: 0 auto;
+  max-width: 50px;
+}
+
+section.factsAndBond .container {
+  width: 50%;
+}
+section.factsAndBond .textContainer {
+  padding: 30px 60px 60px;
+}
+section.factsAndBond h4 {
+  font-family: "Fredericka the Great", cursive;
+  font-weight: 400;
+  font-size: 1.75rem;
+  text-transform: uppercase;
+  color: #152D20;
+}
+section.factsAndBond p {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  line-height: 29px;
+  font-size: 20px;
+  margin: 20px 0;
+}
+section.factsAndBond a {
+  font-family: "Cormorant Garamond", serif;
+  background-color: #152D20;
+  color: #FCFCFC;
+  font-weight: 600;
+  text-align: center;
+  line-height: 29px;
+  display: inline-block;
+  padding: 13px 35px 10px;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+
+.factsFlex, .bondFlex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.factsFlex img, .bondFlex img {
+  height: 100%;
+}
+
+.bondFlex {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+section.about {
+  background-color: #152D20;
+  color: #FCFCFC;
+  padding: 60px 0;
+}
+section.about .aboutFlexWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+section.about .aboutFlexWrapper p.bodyStyle {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  line-height: 29px;
+  font-size: 20px;
+  color: #FCFCFC;
+}
+section.about .aboutFlexWrapper .navText {
+  text-transform: uppercase;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 600;
+  font-size: 22px;
+}
+section.about .aboutFlexWrapper .newsletterContainer {
+  text-align: center;
+  margin: 0 auto;
+  -ms-flex-preferred-size: 60%;
+      flex-basis: 60%;
+}
+section.about .aboutFlexWrapper .contactContainer {
+  text-align: right;
+}
+
+.newsletterContainer .inputBar {
+  width: 380px;
+  height: 50px;
+  border: none;
+  text-decoration: none;
+  padding: 25px;
+}
+.newsletterContainer input[type=submit] {
+  font-family: "Cormorant Garamond", serif;
+  background-color: #000000;
+  color: #FCFCFC;
+  font-weight: 600;
+  text-align: center;
+  line-height: 29px;
+  display: inline-block;
+  padding: 13px 35px 10px;
+  border-radius: 3px;
+  text-transform: uppercase;
+  border: none;
+  text-decoration: none;
+}
+
+footer {
+  background-color: #000000;
+  padding: 10px 0;
+}
+footer p {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  line-height: 29px;
+  font-size: 20px;
+  text-align: center;
+  color: #FCFCFC;
 }
