@@ -60,7 +60,11 @@ img {
     display: inline-block;
     padding: 13px 35px 10px;
     border-radius: 3px;
-    text-transform: uppercase;    
+    text-transform: uppercase;   
+    max-width: 200px;
+    @media (max-width: 800px) {
+        margin: 0 auto;
+    }
 }
 
 //secondary text mixin
@@ -79,6 +83,10 @@ header {
     padding: 20px;
 
     color: $lightColor;
+
+    .burgerIconContainer {
+        display:none;
+    }
 
     .headerFlexWrapper {
         
@@ -258,6 +266,7 @@ section.factsAndBond {
     display: flex;
     img {
         height: 100%;
+        width: fit-content;
     }
 }
 
@@ -323,5 +332,91 @@ footer {
         @include bodyTextStyle();
         text-align: center;
         color: $lightColor;
+    }
+}
+
+@media (max-width: 800px) {
+    .wrapper {
+        max-width: 90%;
+    }
+
+    header {
+        .headerFlexWrapper {
+            flex-direction: row-reverse;    
+        }
+
+        h1 {
+            font-size: 3em;
+            line-height: 50px;
+            margin-top: 0;
+            text-align: left;
+            max-width: 300px;
+
+        }
+        
+        .primaryNav, .socialNav {
+            display: none;
+        }
+        
+        .burgerIconContainer {
+            display: block;
+            width: 50px;
+            height: 50px;
+        }
+    }
+
+    section.suziesSection {
+        padding: 30px 0;
+
+        .suzieFlexWrapper {
+            flex-direction: column;
+            // max-width: 100%;
+        }
+        .imgContainer, .textContainer {
+            max-width: 100%;
+            padding: 10px 0;
+        }
+
+        .textContainer {
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+        }
+    }
+
+    section.someFriendsSection {
+        h3 {
+            max-width: 100%;
+        }
+
+        .galleryFlex {
+            li {
+                max-width: calc( 50% - 10px );
+                
+                &:last-of-type {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    section.storeNav {
+        .buttonsFlex{
+            flex-direction: column;
+
+            li {
+                max-width: 50%;
+                margin: 20px auto;
+            }
+
+            li .iconContainer {
+                max-width: 100px;
+                width: 100%;
+            }
+
+            li p {
+                margin-top: 10px;
+            }
+        }
     }
 }

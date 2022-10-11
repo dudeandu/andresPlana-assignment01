@@ -256,6 +256,9 @@ header {
   padding: 20px;
   color: #FCFCFC;
 }
+header .burgerIconContainer {
+  display: none;
+}
 header .headerFlexWrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -350,6 +353,12 @@ section.suziesSection .textContainer a {
   padding: 13px 35px 10px;
   border-radius: 3px;
   text-transform: uppercase;
+  max-width: 200px;
+}
+@media (max-width: 800px) {
+  section.suziesSection .textContainer a {
+    margin: 0 auto;
+  }
 }
 
 section.someFriendsSection {
@@ -435,6 +444,12 @@ section.factsAndBond a {
   padding: 13px 35px 10px;
   border-radius: 3px;
   text-transform: uppercase;
+  max-width: 200px;
+}
+@media (max-width: 800px) {
+  section.factsAndBond a {
+    margin: 0 auto;
+  }
 }
 
 .factsFlex, .bondFlex {
@@ -444,6 +459,9 @@ section.factsAndBond a {
 }
 .factsFlex img, .bondFlex img {
   height: 100%;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .bondFlex {
@@ -507,8 +525,14 @@ section.about .aboutFlexWrapper .contactContainer {
   padding: 13px 35px 10px;
   border-radius: 3px;
   text-transform: uppercase;
+  max-width: 200px;
   border: none;
   text-decoration: none;
+}
+@media (max-width: 800px) {
+  .newsletterContainer input[type=submit] {
+    margin: 0 auto;
+  }
 }
 
 footer {
@@ -522,4 +546,81 @@ footer p {
   font-size: 20px;
   text-align: center;
   color: #FCFCFC;
+}
+
+@media (max-width: 800px) {
+  .wrapper {
+    max-width: 90%;
+  }
+  header .headerFlexWrapper {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+  header h1 {
+    font-size: 3em;
+    line-height: 50px;
+    margin-top: 0;
+    text-align: left;
+    max-width: 300px;
+  }
+  header .primaryNav, header .socialNav {
+    display: none;
+  }
+  header .burgerIconContainer {
+    display: block;
+    width: 50px;
+    height: 50px;
+  }
+  section.suziesSection {
+    padding: 30px 0;
+  }
+  section.suziesSection .suzieFlexWrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  section.suziesSection .imgContainer, section.suziesSection .textContainer {
+    max-width: 100%;
+    padding: 10px 0;
+  }
+  section.suziesSection .textContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-line-pack: center;
+        align-content: center;
+  }
+  section.someFriendsSection h3 {
+    max-width: 100%;
+  }
+  section.someFriendsSection .galleryFlex li {
+    max-width: calc(50% - 10px);
+  }
+  section.someFriendsSection .galleryFlex li:last-of-type {
+    display: none;
+  }
+  section.storeNav .buttonsFlex {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  section.storeNav .buttonsFlex li {
+    max-width: 50%;
+    margin: 20px auto;
+  }
+  section.storeNav .buttonsFlex li .iconContainer {
+    max-width: 100px;
+    width: 100%;
+  }
+  section.storeNav .buttonsFlex li p {
+    margin-top: 10px;
+  }
 }
