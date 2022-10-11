@@ -459,9 +459,6 @@ section.factsAndBond a {
 }
 .factsFlex img, .bondFlex img {
   height: 100%;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
 }
 
 .bondFlex {
