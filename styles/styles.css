@@ -549,6 +549,9 @@ footer p {
   .wrapper {
     max-width: 90%;
   }
+  header {
+    background-position: -40vh;
+  }
   header .headerFlexWrapper {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: reverse;
@@ -618,6 +621,58 @@ footer p {
     width: 100%;
   }
   section.storeNav .buttonsFlex li p {
+    margin-top: 10px;
+  }
+  section.factsAndBond .wrapper {
+    max-width: 100%;
+  }
+  section.factsAndBond .factsFlex, section.factsAndBond .bondFlex {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    text-align: center;
+  }
+  section.factsAndBond .factsFlex .container, section.factsAndBond .bondFlex .container {
+    width: 100%;
+  }
+  section.about .aboutFlexWrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    max-width: 100%;
+  }
+  section.about .aboutFlexWrapper .aboutNav, section.about .aboutFlexWrapper .contactContainer {
+    text-align: center;
+  }
+  section.about .aboutContainer {
+    margin-bottom: 60px;
+  }
+  section.about .aboutContainer ul {
+    width: 100%;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  section.about .aboutContainer .navText {
+    margin-bottom: 20px;
+  }
+  section.about .aboutFlexWrapper .newsletterContainer {
+    -ms-flex-preferred-size: auto;
+        flex-basis: auto;
+    margin-bottom: 60px;
+  }
+  section.about .aboutFlexWrapper .newsletterContainer .inputBar {
+    width: 100%;
+    text-align: center;
+  }
+  section.about .aboutFlexWrapper .newsletterContainer input[type=submit] {
+    width: 100%;
+    max-width: 100%;
     margin-top: 10px;
   }
 }
